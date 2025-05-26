@@ -230,13 +230,23 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             padding: 10px;
             border-radius: 5px;
-            font-size: 12px;
-            max-width: 200px;
+            font-size: 11px;
+            max-width: 250px;
             z-index: 200;
             display: block;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        #deviceSpecs {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 10px;
+            color: #ccc;
         }
         
         /* Mobile specific fixes */
@@ -268,6 +278,205 @@
         body {
             touch-action: none;
             -webkit-overflow-scrolling: auto;
+        }
+        
+        /* iPhone 16 Pro specific fixes */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+        }
+        
+        /* iPhone 16 Pro Dynamic Island and notch handling */
+        @media screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+            a-scene, a-scene canvas {
+                width: 100vw !important;
+                height: 100vh !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                transform: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        
+        /* Ultra-aggressive full screen enforcement */
+        a-scene {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+            transform: translate3d(0, 0, 0) !important;
+        }
+        
+        /* Ultra-aggressive canvas enforcement */
+        a-scene canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+            object-fit: cover !important;
+            transform: translate3d(0, 0, 0) !important;
+        }
+        
+        /* iPhone 16 Pro specific fixes - 414x896 dimensions */
+        @media screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+            a-scene, a-scene canvas {
+                width: 100vw !important;
+                height: 100vh !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                transform: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                z-index: 1 !important;
+                display: block !important;
+                visibility: visible !important;
+                box-sizing: border-box !important;
+                border: none !important;
+                outline: none !important;
+                overflow: hidden !important;
+            }
+            
+            body.iphone-16-pro a-scene canvas {
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+            
+            /* Dynamic Island and safe area compensation */
+            body.iphone-16-pro {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                overflow: hidden !important;
+            }
+            
+            /* Force full viewport - no safe area interference */
+            body.iphone-16-pro a-scene,
+            body.iphone-16-pro a-scene canvas {
+                width: 100vw !important;
+                height: 100dvh !important;
+                min-width: 100vw !important;
+                min-height: 100dvh !important;
+                max-width: 100vw !important;
+                max-height: 100dvh !important;
+                left: 0 !important;
+                right: 0 !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                transform: translate3d(0, 0, 0) scale(1.001, 1.001) !important;
+                border-radius: 0 !important;
+                clip-path: none !important;
+            }
+        }
+        
+        /* Ultra-aggressive enforcement for detected iPhone 16 Pro */
+        body.iphone-16-pro a-scene,
+        body.iphone-16-pro a-scene canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            min-width: 100vw !important;
+            min-height: 100vh !important;
+            max-width: 100vw !important;
+            max-height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            outline: none !important;
+            transform: translate3d(0, 0, 0) !important;
+        }
+        
+        /* Force video elements on iPhone 16 Pro */
+        body.iphone-16-pro video {
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+        }
+        
+        /* ULTRA-AGGRESSIVE IPHONE 16 PRO FINAL FIX */
+        body.iphone-16-pro,
+        body.iphone-16-pro * {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            outline: 0 !important;
+            box-sizing: border-box !important;
+        }
+        
+        /* Force absolute positioning with exact dimensions */
+        body.iphone-16-pro a-scene,
+        body.iphone-16-pro a-scene canvas,
+        body.iphone-16-pro a-scene > *,
+        body.iphone-16-pro canvas {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 414px !important;
+            height: 896px !important;
+            min-width: 414px !important;
+            min-height: 896px !important;
+            max-width: 414px !important;
+            max-height: 896px !important;
+            transform: none !important;
+            transform-origin: 0 0 !important;
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: 1 !important;
+            overflow: hidden !important;
+            object-fit: cover !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+        /* Emergency viewport lock for iPhone 16 Pro */
+        @media screen and (device-width: 414px) and (device-height: 896px) {
+            html, body {
+                width: 414px !important;
+                height: 896px !important;
+                max-width: 414px !important;
+                max-height: 896px !important;
+                overflow: hidden !important;
+            }
+            
+            a-scene, canvas {
+                width: 414px !important;
+                height: 896px !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+            }
         }
     </style>
 </head>
@@ -311,6 +520,12 @@
         <div>Status: <span id="status">Initializing...</span></div>
         <div>Marker: <span id="markerStatus">Not detected</span></div>
         <div>Camera: <span id="cameraStatus">Starting...</span></div>
+        <div id="deviceSpecs">
+            <div>Device: <span id="deviceInfo">Detecting...</span></div>
+            <div>Screen: <span id="screenInfo">-</span></div>
+            <div>Ratio: <span id="ratioInfo">-</span></div>
+            <div>Inner: <span id="innerInfo">-</span></div>
+        </div>
     </div>
     
     <!-- AR Scene -->
@@ -399,6 +614,11 @@
                 this.detectMobile();
                 this.requestCameraPermission();
                 this.handleLoading();
+                
+                // Start aggressive full-screen enforcement for iPhone 16 Pro
+                if (this.detectiPhone16Pro()) {
+                    this.startAggressiveFullScreenEnforcement();
+                }
             }
             
             setupEventListeners() {
@@ -534,6 +754,11 @@
                     console.log('Ensuring canvas is visible and full screen');
                 }
                 
+                // Apply iPhone 16 Pro specific fixes if detected
+                if (this.detectiPhone16Pro()) {
+                    this.applyiPhone16ProFixes();
+                }
+                
                 this.updateStatus('Scene visible');
                 this.hideLoading(); // Hide loading when scene is visible
             }
@@ -607,15 +832,121 @@
             
             detectMobile() {
                 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (isMobile) {
+                const isIPhone16Pro = this.detectiPhone16Pro();
+                
+                console.log('=== MOBILE DETECTION ===');
+                console.log('Is mobile device:', isMobile);
+                console.log('Is iPhone 16 Pro:', isIPhone16Pro);
+                
+                // Update device info display
+                this.updateDeviceInfo(isIPhone16Pro);
+                
+                if (isMobile || isIPhone16Pro) {
                     document.body.classList.add('mobile');
+                    console.log('✅ Mobile class added to body');
+                    
+                    if (isIPhone16Pro) {
+                        document.body.classList.add('iphone-16-pro');
+                        console.log('🎯 iPhone 16 Pro detected - applying specific fixes');
+                        console.log('📱 iPhone 16 Pro class added to body');
+                    }
+                    
                     // Enable debug info on mobile for testing
                     this.debugInfo.style.display = 'block';
+                    console.log('📊 Debug info enabled for mobile');
                     
                     // Mobile-specific viewport fixes
                     this.fixMobileViewport();
+                    console.log('🔧 Mobile viewport fixes applied');
                 }
-                return isMobile;
+                
+                console.log('=== END MOBILE DETECTION ===');
+                return isMobile || isIPhone16Pro;
+            }
+            
+            updateDeviceInfo(isIPhone16Pro) {
+                const screenWidth = window.screen.width;
+                const screenHeight = window.screen.height;
+                const pixelRatio = window.devicePixelRatio;
+                const innerWidth = window.innerWidth;
+                const innerHeight = window.innerHeight;
+                
+                // Update device info display
+                document.querySelector('#deviceInfo').textContent = isIPhone16Pro ? 'iPhone 16 Pro ✅' : 'Other device';
+                document.querySelector('#screenInfo').textContent = `${screenWidth}x${screenHeight}`;
+                document.querySelector('#ratioInfo').textContent = `${pixelRatio}x`;
+                document.querySelector('#innerInfo').textContent = `${innerWidth}x${innerHeight}`;
+                
+                console.log('📱 Device info updated on screen');
+            }
+            
+            detectiPhone16Pro() {
+                // Enhanced iPhone 16 Pro detection with comprehensive logging
+                const userAgent = navigator.userAgent;
+                const isIOS = /iPad|iPhone|iPod/.test(userAgent);
+                const screenWidth = window.screen.width;
+                const screenHeight = window.screen.height;
+                const pixelRatio = window.devicePixelRatio;
+                const innerWidth = window.innerWidth;
+                const innerHeight = window.innerHeight;
+                
+                // Log all device information for debugging
+                console.log('=== DEVICE DETECTION DEBUG ===');
+                console.log('User Agent:', userAgent);
+                console.log('Is iOS:', isIOS);
+                console.log('Screen dimensions:', screenWidth, 'x', screenHeight);
+                console.log('Pixel ratio:', pixelRatio);
+                console.log('Inner dimensions:', innerWidth, 'x', innerHeight);
+                console.log('Available dimensions:', screen.availWidth, 'x', screen.availHeight);
+                
+                // Enhanced iPhone 16 Pro detection (multiple possible dimensions)
+                const possibleiPhone16ProSpecs = [
+                    // Your actual iPhone 16 Pro dimensions
+                    { width: 414, height: 896, ratio: 3 },
+                    { width: 896, height: 414, ratio: 3 },
+                    // Standard iPhone 16 Pro
+                    { width: 393, height: 852, ratio: 3 },
+                    { width: 852, height: 393, ratio: 3 },
+                    // Possible variations
+                    { width: 390, height: 844, ratio: 3 }, // iPhone 14 Pro dimensions
+                    { width: 844, height: 390, ratio: 3 },
+                    // iPhone 15 Pro dimensions
+                    { width: 375, height: 812, ratio: 3 },
+                    { width: 812, height: 375, ratio: 3 }
+                ];
+                
+                let isIPhone16Pro = false;
+                let matchedSpec = null;
+                
+                if (isIOS && pixelRatio === 3) {
+                    for (const spec of possibleiPhone16ProSpecs) {
+                        if ((screenWidth === spec.width && screenHeight === spec.height) ||
+                            (innerWidth === spec.width && innerHeight === spec.height)) {
+                            isIPhone16Pro = true;
+                            matchedSpec = spec;
+                            break;
+                        }
+                    }
+                }
+                
+                // Also check if it's iOS with modern dimensions and 3x ratio
+                if (isIOS && pixelRatio === 3 && !isIPhone16Pro) {
+                    // Any iOS device with 3x pixel ratio and modern aspect ratio
+                    const aspectRatio = Math.max(screenWidth, screenHeight) / Math.min(screenWidth, screenHeight);
+                    if (aspectRatio > 2.0 && aspectRatio < 2.5) { // Modern iPhone aspect ratios
+                        isIPhone16Pro = true;
+                        matchedSpec = { width: screenWidth, height: screenHeight, ratio: pixelRatio };
+                        console.log('Detected as modern iPhone (likely iPhone 16 Pro) based on aspect ratio');
+                    }
+                }
+                
+                console.log('iPhone 16 Pro detected:', isIPhone16Pro);
+                if (matchedSpec) {
+                    console.log('Matched spec:', matchedSpec);
+                }
+                console.log('=== END DEVICE DETECTION ===');
+                
+                return isIPhone16Pro;
             }
             
             fixMobileViewport() {
@@ -623,6 +954,11 @@
                 const viewport = document.querySelector('meta[name=viewport]');
                 if (viewport) {
                     viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover');
+                }
+                
+                // iPhone 16 Pro specific fixes
+                if (this.detectiPhone16Pro()) {
+                    this.applyiPhone16ProFixes();
                 }
                 
                 // Prevent iOS Safari address bar issues
@@ -635,7 +971,53 @@
                 window.addEventListener('resize', fixViewportHeight);
                 window.addEventListener('orientationchange', () => {
                     setTimeout(fixViewportHeight, 500);
+                    if (this.detectiPhone16Pro()) {
+                        setTimeout(() => this.applyiPhone16ProFixes(), 1000);
+                    }
                 });
+            }
+            
+            applyiPhone16ProFixes() {
+                console.log('Applying iPhone 16 Pro specific fixes');
+                
+                // Force full screen styles
+                const scene = document.querySelector('a-scene');
+                const canvas = document.querySelector('a-scene canvas');
+                
+                if (scene) {
+                    scene.style.setProperty('width', '100vw', 'important');
+                    scene.style.setProperty('height', '100vh', 'important');
+                    scene.style.setProperty('position', 'fixed', 'important');
+                    scene.style.setProperty('top', '0', 'important');
+                    scene.style.setProperty('left', '0', 'important');
+                    scene.style.setProperty('right', '0', 'important');
+                    scene.style.setProperty('bottom', '0', 'important');
+                    scene.style.setProperty('transform', 'translate3d(0, 0, 0)', 'important');
+                    scene.style.setProperty('z-index', '1', 'important');
+                }
+                
+                if (canvas) {
+                    canvas.style.setProperty('width', '100vw', 'important');
+                    canvas.style.setProperty('height', '100vh', 'important');
+                    canvas.style.setProperty('position', 'fixed', 'important');
+                    canvas.style.setProperty('top', '0', 'important');
+                    canvas.style.setProperty('left', '0', 'important');
+                    canvas.style.setProperty('right', '0', 'important');
+                    canvas.style.setProperty('bottom', '0', 'important');
+                    canvas.style.setProperty('transform', 'translate3d(0, 0, 0)', 'important');
+                    canvas.style.setProperty('object-fit', 'cover', 'important');
+                    canvas.style.setProperty('z-index', '1', 'important');
+                }
+                
+                // Force full screen on the renderer if available
+                setTimeout(() => {
+                    if (this.scene && this.scene.systems && this.scene.systems.renderer) {
+                        const renderer = this.scene.systems.renderer.renderer;
+                        renderer.setSize(window.innerWidth, window.innerHeight);
+                        renderer.domElement.style.setProperty('width', '100vw', 'important');
+                        renderer.domElement.style.setProperty('height', '100vh', 'important');
+                    }
+                }, 500);
             }
             
             handleLoading() {
@@ -670,6 +1052,8 @@
             
             ensureFullScreen() {
                 const canvas = document.querySelector('a-scene canvas');
+                const scene = document.querySelector('a-scene');
+                
                 if (canvas) {
                     canvas.style.width = '100vw';
                     canvas.style.height = '100vh';
@@ -678,6 +1062,27 @@
                     canvas.style.left = '0';
                     canvas.style.zIndex = '1';
                     console.log('Enforcing full screen canvas');
+                }
+                
+                if (scene) {
+                    scene.style.width = '100vw';
+                    scene.style.height = '100vh';
+                    scene.style.position = 'fixed';
+                    scene.style.top = '0';
+                    scene.style.left = '0';
+                    console.log('Enforcing full screen scene');
+                }
+                
+                // iPhone 16 Pro gets extra aggressive treatment
+                if (this.detectiPhone16Pro()) {
+                    console.log('Applying iPhone 16 Pro ultra-aggressive full screen');
+                    this.applyiPhone16ProFixes();
+                    
+                    // Force a re-render
+                    if (this.scene && this.scene.systems && this.scene.systems.renderer) {
+                        const renderer = this.scene.systems.renderer.renderer;
+                        renderer.setSize(window.innerWidth, window.innerHeight);
+                    }
                 }
             }
             
@@ -707,6 +1112,217 @@
             
             showError(message) {
                 alert(message);
+            }
+            
+            startAggressiveFullScreenEnforcement() {
+                console.log('🚀 Starting ULTRA-aggressive full-screen enforcement for iPhone 16 Pro');
+                
+                // Start continuous correction immediately
+                this.startContinuousCorrection();
+                
+                // Run immediately
+                this.forceUltraFullScreen();
+                
+                // Run every 100ms for the first 10 seconds
+                const aggressiveInterval = setInterval(() => {
+                    this.forceUltraFullScreen();
+                }, 100);
+                
+                // Stop aggressive enforcement after 10 seconds, continue with slower interval
+                setTimeout(() => {
+                    clearInterval(aggressiveInterval);
+                    
+                    // Continue with slower enforcement every 2 seconds
+                    setInterval(() => {
+                        this.forceUltraFullScreen();
+                    }, 2000);
+                }, 10000);
+            }
+            
+            startContinuousCorrection() {
+                // Ultra-aggressive continuous correction every 50ms
+                setInterval(() => {
+                    this.applyContinuousCorrection();
+                }, 50);
+                
+                console.log('🔥 Continuous viewport correction started (every 50ms)');
+            }
+            
+            applyContinuousCorrection() {
+                if (!this.detectiPhone16Pro()) return;
+                
+                const scene = document.querySelector('a-scene');
+                const canvas = document.querySelector('a-scene canvas');
+                const allCanvases = document.querySelectorAll('canvas');
+                
+                // Force exact iPhone 16 Pro dimensions
+                const exactWidth = '414px';
+                const exactHeight = '896px';
+                
+                // Apply to scene
+                if (scene) {
+                    scene.style.setProperty('width', exactWidth, 'important');
+                    scene.style.setProperty('height', exactHeight, 'important');
+                    scene.style.setProperty('position', 'fixed', 'important');
+                    scene.style.setProperty('top', '0px', 'important');
+                    scene.style.setProperty('left', '0px', 'important');
+                    scene.style.setProperty('right', 'auto', 'important');
+                    scene.style.setProperty('bottom', 'auto', 'important');
+                    scene.style.setProperty('transform', 'none', 'important');
+                    scene.style.setProperty('overflow', 'hidden', 'important');
+                    scene.style.setProperty('margin', '0px', 'important');
+                    scene.style.setProperty('padding', '0px', 'important');
+                }
+                
+                // Apply to all canvases
+                allCanvases.forEach(canvas => {
+                    canvas.style.setProperty('width', exactWidth, 'important');
+                    canvas.style.setProperty('height', exactHeight, 'important');
+                    canvas.style.setProperty('position', 'fixed', 'important');
+                    canvas.style.setProperty('top', '0px', 'important');
+                    canvas.style.setProperty('left', '0px', 'important');
+                    canvas.style.setProperty('right', 'auto', 'important');
+                    canvas.style.setProperty('bottom', 'auto', 'important');
+                    canvas.style.setProperty('transform', 'none', 'important');
+                    canvas.style.setProperty('object-fit', 'cover', 'important');
+                    canvas.style.setProperty('margin', '0px', 'important');
+                    canvas.style.setProperty('padding', '0px', 'important');
+                    canvas.style.setProperty('border', 'none', 'important');
+                    canvas.style.setProperty('outline', 'none', 'important');
+                    
+                    // Set canvas attributes to exact pixels
+                    canvas.setAttribute('width', '414');
+                    canvas.setAttribute('height', '896');
+                });
+                
+                // Force body and html to exact dimensions
+                document.body.style.setProperty('width', exactWidth, 'important');
+                document.body.style.setProperty('height', exactHeight, 'important');
+                document.body.style.setProperty('max-width', exactWidth, 'important');
+                document.body.style.setProperty('max-height', exactHeight, 'important');
+                document.body.style.setProperty('overflow', 'hidden', 'important');
+                
+                document.documentElement.style.setProperty('width', exactWidth, 'important');
+                document.documentElement.style.setProperty('height', exactHeight, 'important');
+                document.documentElement.style.setProperty('max-width', exactWidth, 'important');
+                document.documentElement.style.setProperty('max-height', exactHeight, 'important');
+                document.documentElement.style.setProperty('overflow', 'hidden', 'important');
+                
+                // Force renderer to exact dimensions if available
+                if (this.scene && this.scene.systems && this.scene.systems.renderer) {
+                    const renderer = this.scene.systems.renderer.renderer;
+                    renderer.setSize(414, 896, false);
+                    const rendererElement = renderer.domElement;
+                    if (rendererElement) {
+                        rendererElement.style.setProperty('width', exactWidth, 'important');
+                        rendererElement.style.setProperty('height', exactHeight, 'important');
+                        rendererElement.style.setProperty('position', 'fixed', 'important');
+                        rendererElement.style.setProperty('top', '0px', 'important');
+                        rendererElement.style.setProperty('left', '0px', 'important');
+                    }
+                }
+            }
+            
+            forceUltraFullScreen() {
+                const scene = document.querySelector('a-scene');
+                const canvas = document.querySelector('a-scene canvas');
+                const video = document.querySelector('video');
+                
+                // Get the actual viewport dimensions
+                const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                
+                console.log(`🔧 Forcing ultra full screen: ${vw}x${vh}`);
+                
+                // Force scene to full viewport with extra coverage
+                if (scene) {
+                    const sceneStyles = {
+                        'width': `${vw}px`,
+                        'height': `${vh}px`,
+                        'min-width': `${vw}px`,
+                        'min-height': `${vh}px`,
+                        'max-width': `${vw}px`,
+                        'max-height': `${vh}px`,
+                        'position': 'fixed',
+                        'top': '0',
+                        'left': '0',
+                        'right': '0',
+                        'bottom': '0',
+                        'z-index': '1',
+                        'display': 'block',
+                        'visibility': 'visible',
+                        'transform': 'translate3d(0, 0, 0)',
+                        'margin': '0',
+                        'padding': '0',
+                        'border': 'none',
+                        'outline': 'none',
+                        'overflow': 'hidden',
+                        'box-sizing': 'border-box'
+                    };
+                    
+                    Object.entries(sceneStyles).forEach(([prop, value]) => {
+                        scene.style.setProperty(prop, value, 'important');
+                    });
+                }
+                
+                // Force canvas to full viewport with slight oversize to eliminate gaps
+                if (canvas) {
+                    const canvasStyles = {
+                        'width': `${vw + 2}px`,
+                        'height': `${vh + 2}px`,
+                        'min-width': `${vw + 2}px`,
+                        'min-height': `${vh + 2}px`,
+                        'max-width': `${vw + 2}px`,
+                        'max-height': `${vh + 2}px`,
+                        'position': 'fixed',
+                        'top': '-1px',
+                        'left': '-1px',
+                        'right': '-1px',
+                        'bottom': '-1px',
+                        'z-index': '1',
+                        'display': 'block',
+                        'visibility': 'visible',
+                        'object-fit': 'cover',
+                        'transform': 'translate3d(0, 0, 0)',
+                        'margin': '0',
+                        'padding': '0',
+                        'border': 'none',
+                        'outline': 'none',
+                        'overflow': 'hidden',
+                        'box-sizing': 'border-box'
+                    };
+                    
+                    Object.entries(canvasStyles).forEach(([prop, value]) => {
+                        canvas.style.setProperty(prop, value, 'important');
+                    });
+                    
+                    // Also set canvas attributes directly for iPhone 16 Pro
+                    if (this.detectiPhone16Pro()) {
+                        canvas.setAttribute('width', vw + 2);
+                        canvas.setAttribute('height', vh + 2);
+                        console.log(`📱 iPhone 16 Pro canvas sized to: ${vw + 2}x${vh + 2}`);
+                    }
+                }
+                
+                // Force any video elements to full screen
+                if (video) {
+                    video.style.setProperty('width', `${vw}px`, 'important');
+                    video.style.setProperty('height', `${vh}px`, 'important');
+                    video.style.setProperty('object-fit', 'cover', 'important');
+                }
+                
+                // Force renderer resize with extra coverage
+                if (this.scene && this.scene.systems && this.scene.systems.renderer) {
+                    const renderer = this.scene.systems.renderer.renderer;
+                    renderer.setSize(vw + 2, vh + 2, false);
+                    renderer.domElement.style.setProperty('width', `${vw + 2}px`, 'important');
+                    renderer.domElement.style.setProperty('height', `${vh + 2}px`, 'important');
+                    renderer.domElement.style.setProperty('left', '-1px', 'important');
+                    renderer.domElement.style.setProperty('top', '-1px', 'important');
+                }
+                
+                // Log for debugging
+                console.log(`✅ Ultra full screen enforced: scene ${vw}x${vh}, canvas ${vw + 2}x${vh + 2}`);
             }
         }
         
