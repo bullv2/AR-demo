@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Marker Generator - Event Marker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .marker-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .marker {
+            display: inline-block;
+            border: 20px solid white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            margin: 20px;
+        }
+        
+        .marker img {
+            display: block;
+            max-width: 300px;
+            height: auto;
+        }
+        
+        .instructions {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .instructions h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        
+        .instructions ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        
+        .print-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .print-button:hover {
+            background: #45a049;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .marker-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        @media print {
+            body { margin: 0; padding: 0; background: white; }
+            .container { box-shadow: none; margin: 0; padding: 20px; }
+            .print-button, .instructions, .success { display: none; }
+            .marker { margin: 50px auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 AR Event Marker - Ready to Print</h1>
+        
+        <div class="success">
+            <strong>✅ Custom Marker Loaded:</strong> This is your event-specific AR marker. Print it for the best detection experience!
+        </div>
+        
+        <div class="marker-section">
+            <h2>Print this marker for your AR experience:</h2>
+            <div class="marker">
+                <img id="markerImage" src="assets/markers/pattern-marker.png" alt="AR Event Marker" />
+            </div>
+            <button class="print-button" onclick="window.print()">🖨 Print Marker</button>
+            <button class="print-button" onclick="downloadMarker()">💾 Download PNG</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>📱 How to Use the AR Experience:</h3>
+            <ol>
+                <li><strong>Print this marker</strong> on white paper (minimum 4x4 inches)</li>
+                <li><strong>Open the AR experience</strong> via the ngrok HTTPS URL on your phone</li>
+                <li><strong>Allow camera permissions</strong> when prompted</li>
+                <li><strong>Point camera at the printed marker</strong></li>
+                <li><strong>Keep marker flat and well-lit</strong> for best detection</li>
+                <li><strong>Your event video will auto-play</strong> when marker is detected! 🎥</li>
+            </ol>
+        </div>
+        
+        <div class="marker-info">
+            <h4>📐 Marker Specifications:</h4>
+            <ul>
+                <li><strong>Format:</strong> Custom PNG marker pattern</li>
+                <li><strong>Size:</strong> Optimized for mobile AR detection</li>
+                <li><strong>Border:</strong> White border included for better tracking</li>
+                <li><strong>Print size:</strong> Minimum 4x4 inches (10x10 cm) recommended</li>
+                <li><strong>Paper:</strong> Use white paper with good contrast</li>
+                <li><strong>Lighting:</strong> Ensure good, even lighting when scanning</li>
+            </ul>
+        </div>
+        
+        <div class="instructions">
+            <h3>💡 Pro Tips for Best Results:</h3>
+            <ol>
+                <li><strong>Print Quality:</strong> Use laser printer or high-quality inkjet</li>
+                <li><strong>Paper Size:</strong> A4 or Letter size paper works great</li>
+                <li><strong>Placement:</strong> Place marker on flat, stable surface</li>
+                <li><strong>Distance:</strong> Hold phone 6-12 inches from marker</li>
+                <li><strong>Angle:</strong> Keep phone parallel to marker surface</li>
+                <li><strong>Stability:</strong> Hold phone steady for 2-3 seconds for detection</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function downloadMarker() {
+            const link = document.createElement('a');
+            link.download = 'ar-event-marker.png';
+            link.href = 'assets/markers/pattern-marker.png';
+            link.click();
+        }
+        
+        // Check if image loads successfully
+        document.getElementById('markerImage').addEventListener('load', function() {
+            console.log('✅ Custom marker loaded successfully');
+        });
+        
+        document.getElementById('markerImage').addEventListener('error', function() {
+            console.error('❌ Failed to load custom marker');
+            // Fallback: show error message
+            this.alt = 'Marker image not found - please ensure pattern-marker.png exists in assets/markers/';
+            this.style.border = '2px dashed #ff6b6b';
+            this.style.padding = '20px';
+            this.style.color = '#ff6b6b';
+        });
+    </script>
+</body>
+</html> 
