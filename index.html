@@ -803,6 +803,201 @@
             backdrop-filter: blur(10px) !important;
         }
         
+        /* GALAXY A52 SPECIFIC VIDEO PLAYER FIXES */
+        @media screen and (width: 412px) and (height: 915px) {
+            body.galaxy-a52 #videoOverlay {
+                position: fixed !important;
+                top: 0px !important;
+                left: 0px !important;
+                width: 412px !important;
+                height: 915px !important;
+                min-width: 412px !important;
+                min-height: 915px !important;
+                max-width: 412px !important;
+                max-height: 915px !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                margin: 0px !important;
+                padding: 0px !important;
+                border: none !important;
+                outline: none !important;
+                box-sizing: border-box !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                background: rgba(0, 0, 0, 0.9) !important;
+                justify-content: center !important;
+                align-items: center !important;
+                z-index: 500 !important;
+                -webkit-overflow-scrolling: touch !important;
+                touch-action: pan-y !important;
+            }
+            
+            body.galaxy-a52 #videoOverlay[style*="display: flex"] {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                padding: 25px 0px !important;
+            }
+            
+            body.galaxy-a52 #eventVideo {
+                position: relative !important;
+                width: 370px !important;
+                height: 660px !important;
+                max-width: 370px !important;
+                max-height: none !important;
+                min-width: 370px !important;
+                min-height: 660px !important;
+                object-fit: contain !important;
+                object-position: center !important;
+                border-radius: 12px !important;
+                box-sizing: border-box !important;
+                transform: none !important;
+                margin: 25px 0px !important;
+                padding: 0px !important;
+                border: none !important;
+                outline: none !important;
+                flex-shrink: 0 !important;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+            }
+            
+            body.galaxy-a52 #closeVideo {
+                position: absolute !important;
+                top: 25px !important;
+                right: 25px !important;
+                width: 45px !important;
+                height: 45px !important;
+                transform: none !important;
+                margin: 0px !important;
+                padding: 0px !important;
+                border: 2px solid rgba(255, 255, 255, 0.4) !important;
+                border-radius: 50% !important;
+                background: rgba(255, 255, 255, 0.25) !important;
+                color: white !important;
+                font-size: 26px !important;
+                cursor: pointer !important;
+                z-index: 501 !important;
+                backdrop-filter: blur(15px) !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            body.galaxy-a52 #closeVideo:hover {
+                background: rgba(255, 255, 255, 0.35) !important;
+                transform: scale(1.1) !important;
+            }
+        }
+
+        /* GALAXY A52 SPECIFIC VIDEO PLAYER FIXES - 384x954 dimensions */
+        @media screen and (width: 384px) and (height: 954px) {
+            body.galaxy-a52 #videoOverlay {
+                position: fixed !important;
+                top: 0px !important;
+                left: 0px !important;
+                width: 384px !important;
+                height: 954px !important;
+                min-width: 384px !important;
+                min-height: 954px !important;
+                max-width: 384px !important;
+                max-height: 954px !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                margin: 0px !important;
+                padding: 0px !important;
+                border: none !important;
+                outline: none !important;
+                box-sizing: border-box !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                background: rgba(0, 0, 0, 0.9) !important;
+                justify-content: center !important;
+                align-items: center !important;
+                z-index: 500 !important;
+                -webkit-overflow-scrolling: touch !important;
+                touch-action: pan-y !important;
+            }
+            
+            body.galaxy-a52 #videoOverlay[style*="display: flex"] {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                padding: 20px 0px !important;
+            }
+            
+            body.galaxy-a52 #eventVideo {
+                position: relative !important;
+                width: 340px !important;
+                height: 720px !important;
+                max-width: 340px !important;
+                max-height: none !important;
+                min-width: 340px !important;
+                min-height: 720px !important;
+                object-fit: contain !important;
+                object-position: center !important;
+                border-radius: 12px !important;
+                box-sizing: border-box !important;
+                transform: none !important;
+                margin: 20px 0px !important;
+                padding: 0px !important;
+                border: none !important;
+                outline: none !important;
+                flex-shrink: 0 !important;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+            }
+            
+            body.galaxy-a52 #closeVideo {
+                position: absolute !important;
+                top: 20px !important;
+                right: 20px !important;
+                width: 40px !important;
+                height: 40px !important;
+                transform: none !important;
+                margin: 0px !important;
+                padding: 0px !important;
+                border: 2px solid rgba(255, 255, 255, 0.4) !important;
+                border-radius: 50% !important;
+                background: rgba(255, 255, 255, 0.25) !important;
+                color: white !important;
+                font-size: 22px !important;
+                cursor: pointer !important;
+                z-index: 501 !important;
+                backdrop-filter: blur(15px) !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            body.galaxy-a52 #closeVideo:hover {
+                background: rgba(255, 255, 255, 0.35) !important;
+                transform: scale(1.1) !important;
+            }
+        }
+        
+        /* GENERAL GALAXY A52 OPTIMIZATIONS */
+        @media screen and (width: 412px) and (height: 915px),
+               screen and (width: 384px) and (height: 854px),
+               screen and (width: 384px) and (height: 954px) {
+            body.galaxy-a52 #triggeredOverlay {
+                width: 320px !important;
+                max-width: 85vw !important;
+                padding: 25px !important;
+            }
+            
+            body.galaxy-a52 .triggered-title {
+                font-size: 26px !important;
+            }
+            
+            body.galaxy-a52 .countdown-circle {
+                width: 90px !important;
+                height: 90px !important;
+                border-width: 5px !important;
+            }
+            
+            body.galaxy-a52 .countdown-number {
+                font-size: 45px !important;
+            }
+        }
+        
         /* Hide instructions button - Updated to match motion button styling */
         #hideInstructions {
             background: linear-gradient(135deg, #4CAF50, #45a049, #2E7D32) !important;
@@ -895,6 +1090,142 @@
                 max-width: 150px;
             }
         }
+        
+        /* Triggered animation overlay */
+        #triggeredOverlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            max-width: 80vw;
+            background: rgba(76, 175, 80, 0.95);
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 600;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: triggeredPulse 0.5s ease-in-out;
+        }
+        
+        .triggered-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .triggered-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            animation: triggeredBounce 0.6s ease-out;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .triggered-subtitle {
+            font-size: 14px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .countdown-circle {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            animation: countdownSpin 3s linear;
+        }
+        
+        .countdown-number {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            animation: countdownPulse 1s ease-in-out infinite;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown-circle::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 4px solid #FFD700;
+            border-radius: 50%;
+            border-top: 4px solid transparent;
+            animation: countdownRotate 3s linear;
+        }
+        
+        @keyframes triggeredPulse {
+            0% { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes triggeredBounce {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            60% {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes countdownSpin {
+            0% {
+                transform: rotate(0deg);
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                transform: rotate(360deg);
+                border-color: rgba(255, 215, 0, 0.8);
+            }
+        }
+        
+        @keyframes countdownRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes countdownPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
     </style>
 </head>
 <body>
@@ -903,6 +1234,21 @@
         <div class="loader"></div>
         <div class="loading-text">Loading AR Experience</div>
         <div class="loading-subtext">Please allow camera access when prompted for the best experience</div>
+        
+        <!-- Manual Start Button as fallback -->
+        <button id="manualStart" style="
+            background: linear-gradient(135deg, #4CAF50, #45a049, #2E7D32);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            display: none;
+            transition: all 0.3s ease;
+        ">🚀 Start AR Experience</button>
     </div>
     
     <!-- Instructions Overlay -->
@@ -944,6 +1290,17 @@
         <button id="closeVideo">&times;</button>
     </div>
     
+    <!-- Triggered Animation Overlay -->
+    <div id="triggeredOverlay">
+        <div class="triggered-content">
+            <div class="triggered-title">🎯 TRIGGERED!</div>
+            <div class="triggered-subtitle">Starting video in...</div>
+            <div class="countdown-circle">
+                <div class="countdown-number" id="countdownNumber">3</div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Debug Info -->
     <div id="debugInfo">
         <div>Status: <span id="status">Initializing...</span></div>
@@ -961,8 +1318,12 @@
     <a-scene
         embedded
         arjs="debugUIEnabled: false; 
-              detectionMode: mono_and_matrix; 
-              matrixCodeType: 3x3;"
+              detectionMode: mono; 
+              sourceType: webcam;
+              trackingMethod: best;
+              maxDetectionRate: 60;
+              canvasWidth: 640;
+              canvasHeight: 480;"
         vr-mode-ui="enabled: false"
         renderer="logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;"
         loading-screen="enabled: false"
@@ -994,9 +1355,10 @@
             preset="custom"
             url="assets/markers/pattern-marker.patt"
             smooth="true"
-            smoothCount="10"
+            smoothCount="5"
             smoothTolerance="0.01"
-            smoothThreshold="5"
+            smoothThreshold="2"
+            minConfidence="0.6"
             raycaster="objects: .clickable">
             
             <!-- 3D Content on marker (optional) -->
@@ -1028,6 +1390,8 @@
                 this.loading = document.querySelector('#loading');
                 this.instructions = document.querySelector('#instructions');
                 this.debugInfo = document.querySelector('#debugInfo');
+                this.triggeredOverlay = document.querySelector('#triggeredOverlay');
+                this.countdownNumber = document.querySelector('#countdownNumber');
                 
                 this.markerDetected = false;
                 this.videoPlaying = false;
@@ -1041,8 +1405,8 @@
                 this.setupAREvents();
                 this.detectMobile();
                 
-                // Disable automatic permission requests to avoid white dialogs
-                // this.requestPermissionsAutomatically();
+                // Re-enable automatic permission requests for proper camera access
+                this.requestPermissionsAutomatically();
                 
                 this.handleLoading();
                 
@@ -1056,6 +1420,30 @@
             }
             
             setupEventListeners() {
+                // Manual start button
+                const manualStartButton = document.querySelector('#manualStart');
+                if (manualStartButton) {
+                    manualStartButton.addEventListener('click', () => {
+                        console.log('🚀 Manual start button clicked - forcing AR experience to start');
+                        this.hideLoading();
+                        this.updateStatus('Manually started');
+                        this.cameraReady = true;
+                        this.ensureSceneVisible();
+                    });
+                }
+                
+                // Hide loading on any user interaction after camera permission
+                const hideLoadingOnInteraction = () => {
+                    console.log('👆 User interaction detected - hiding loading screen');
+                    this.hideLoading();
+                    this.cameraReady = true;
+                };
+                
+                // Add multiple interaction listeners
+                document.addEventListener('click', hideLoadingOnInteraction, { once: true });
+                document.addEventListener('touchstart', hideLoadingOnInteraction, { once: true });
+                document.addEventListener('keydown', hideLoadingOnInteraction, { once: true });
+                
                 // Motion permission button with error handling
                 const motionButton = document.querySelector('#requestMotionPermissions');
                 if (motionButton) {
@@ -1121,20 +1509,48 @@
             setupAREvents() {
                 // Scene loaded
                 this.scene.addEventListener('loaded', () => {
-                    console.log('AR Scene loaded');
+                    console.log('✅ AR Scene loaded');
                     this.updateStatus('Scene ready');
-                    this.hideLoading();
+                    this.ensureSceneVisible();
                 });
                 
-                // Scene render start
+                // Scene render start - this means the camera is actually working
                 this.scene.addEventListener('renderstart', () => {
-                    console.log('AR Scene render started');
-                    this.updateStatus('Rendering...');
+                    console.log('🎬 AR Scene render started - camera is working!');
+                    this.updateStatus('Camera active');
+                    this.updateCameraStatus('Active & rendering');
+                    this.hideLoading();
+                    this.cameraReady = true;
+                });
+                
+                // AR.js specific camera events
+                this.scene.addEventListener('arjs-video-loaded', () => {
+                    console.log('📹 AR.js camera video loaded successfully!');
+                    this.updateCameraStatus('Video stream active');
+                    this.hideLoading();
+                    this.cameraReady = true;
+                    this.ensureSceneVisible();
+                });
+                
+                // Camera initialization
+                this.scene.addEventListener('camera-init', () => {
+                    console.log('📷 AR camera initialized');
+                    this.updateCameraStatus('Initialized');
+                    this.hideLoading();
+                    this.cameraReady = true;
+                });
+                
+                // Listen for any AR.js source-ready events
+                window.addEventListener('arjs-source-ready', () => {
+                    console.log('🎯 AR.js camera source ready!');
+                    this.updateCameraStatus('Source ready');
+                    this.hideLoading();
+                    this.cameraReady = true;
                 });
                 
                 // Marker found
                 this.marker.addEventListener('markerFound', () => {
-                    console.log('Marker detected!');
+                    console.log('🎯 Marker detected!');
                     this.markerDetected = true;
                     this.updateMarkerStatus('Detected!');
                     this.triggerVideo();
@@ -1142,53 +1558,96 @@
                 
                 // Marker lost
                 this.marker.addEventListener('markerLost', () => {
-                    console.log('Marker lost');
+                    console.log('❌ Marker lost');
                     this.markerDetected = false;
                     this.updateMarkerStatus('Not detected');
                 });
                 
-                // Camera ready
-                this.scene.addEventListener('camera-init', () => {
-                    console.log('Camera initialized');
-                    this.updateCameraStatus('Ready');
-                    this.cameraReady = true;
-                    this.hideLoading();
-                });
-                
-                // Error handling
+                // Enhanced error handling
                 this.scene.addEventListener('camera-error', (error) => {
-                    console.error('Camera error:', error);
-                    this.updateCameraStatus('Error');
-                    this.showError('Camera access denied. Please enable camera permissions and refresh.');
+                    console.error('❌ Camera error:', error);
+                    this.updateCameraStatus('Error detected');
+                    this.showCameraError();
                 });
                 
-                // AR.js specific events
-                this.scene.addEventListener('arjs-video-loaded', () => {
-                    console.log('Camera video loaded');
-                    this.updateCameraStatus('Video Ready');
-                    this.cameraReady = true;
-                    this.hideLoading();
-                });
-                
-                // Handle getUserMedia errors
+                // Listen for any WebRTC/getUserMedia errors
                 window.addEventListener('error', (event) => {
-                    if (event.message && event.message.includes('getUserMedia')) {
-                        console.error('Camera access error:', event);
-                        this.updateCameraStatus('Access Denied');
-                        this.showError('Camera access is required for AR. Please allow camera access and refresh.');
+                    if (event.message && (event.message.includes('getUserMedia') || event.message.includes('camera'))) {
+                        console.error('❌ Camera-related error:', event);
+                        this.updateCameraStatus('Browser error');
+                        this.showCameraError();
                     }
                 });
                 
-                // Force scene visibility after initialization
-                setTimeout(() => {
-                    this.ensureSceneVisible();
-                }, 500);
+                // Force check camera status periodically
+                this.startCameraStatusCheck();
                 
-                // Also run again after a bit more time
+                // Ensure scene becomes visible
                 setTimeout(() => {
                     this.ensureSceneVisible();
-                    this.ensureFullScreen();
-                }, 3000);
+                    this.checkARjsStatus();
+                }, 1000);
+                
+                // Check again after more time
+                setTimeout(() => {
+                    this.ensureSceneVisible();
+                    this.checkARjsStatus();
+                    this.forceARjsCamera();
+                }, 5000);
+            }
+            
+            debugMarkerDetection() {
+                console.log('🔍 Debugging marker detection...');
+                
+                // Check if marker element exists
+                const marker = document.querySelector('#markerA');
+                if (marker) {
+                    console.log('✅ Marker element found:', marker);
+                    console.log('📄 Marker URL:', marker.getAttribute('url'));
+                    console.log('🎯 Marker type:', marker.getAttribute('type'));
+                    console.log('⚙️ Marker preset:', marker.getAttribute('preset'));
+                } else {
+                    console.error('❌ Marker element not found!');
+                }
+                
+                // Check if pattern file is accessible
+                fetch('assets/markers/pattern-marker.patt')
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('✅ Pattern file accessible');
+                            return response.text();
+                        } else {
+                            console.error('❌ Pattern file not accessible:', response.status);
+                        }
+                    })
+                    .then(content => {
+                        if (content) {
+                            console.log('📄 Pattern file content length:', content.length);
+                            console.log('📄 Pattern file first line:', content.split('\n')[0]);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('❌ Error loading pattern file:', error);
+                    });
+                
+                // Check AR.js context
+                if (this.scene && this.scene.systems && this.scene.systems['arjs']) {
+                    console.log('✅ AR.js system found');
+                    const arjsSystem = this.scene.systems['arjs'];
+                    console.log('🔧 AR.js system:', arjsSystem);
+                } else {
+                    console.error('❌ AR.js system not found');
+                }
+                
+                // Check camera status
+                const video = document.querySelector('video');
+                if (video) {
+                    console.log('📹 Video element found');
+                    console.log('📹 Video ready state:', video.readyState);
+                    console.log('📹 Video dimensions:', video.videoWidth, 'x', video.videoHeight);
+                } else {
+                    console.error('❌ Video element not found');
+                }
             }
             
             ensureSceneVisible() {
@@ -1229,42 +1688,33 @@
             
             async requestCameraPermission() {
                 try {
-                    console.log('🔄 Skipping camera permission request to avoid dialog...');
-                    this.updateCameraStatus('Skipping permission request');
+                    console.log('📷 Letting AR.js handle camera initialization...');
+                    this.updateCameraStatus('Waiting for AR.js');
                     
-                    // Skip camera permission request - just proceed with AR scene
-                    // const stream = await navigator.mediaDevices.getUserMedia({ 
-                    //     video: { 
-                    //         facingMode: 'environment' // Use back camera for AR
-                    //     } 
-                    // });
+                    // Let AR.js handle camera access entirely - don't request manually
+                    // This prevents conflicts between our permission request and AR.js
+                    console.log('✅ Camera handling delegated to AR.js');
+                    this.updateCameraStatus('AR.js handling camera');
                     
-                    console.log('⚠️ Camera permission request skipped - AR.js will handle camera access');
-                    this.updateCameraStatus('Permission skipped');
-                    
-                    // Don't stop any stream since we're not requesting one
-                    // stream.getTracks().forEach(track => track.stop());
-                    
-                    // Proceed with AR scene initialization
+                    // Hide loading after a short delay to let AR.js start
                     setTimeout(() => {
-                        this.ensureSceneVisible();
-                        // Force the AR.js scene to initialize camera if it hasn't already
-                        if (this.scene && this.scene.systems && this.scene.systems['arjs']) {
-                            console.log('🎯 AR.js should handle camera permissions internally...');
-                        }
-                    }, 1000);
-                    
-                } catch (error) {
-                    console.error('❌ Camera permission flow error:', error);
-                    this.updateCameraStatus('Permission flow error');
-                    
-                    // Don't show aggressive error, just log it
-                    console.log('Camera access issue:', error.name);
-                    
-                    // Still try to show the scene
-                    setTimeout(() => {
+                        console.log('📷 Initial camera setup complete - hiding loading');
+                        this.hideLoading();
+                        this.updateStatus('Camera delegated to AR.js');
+                        this.cameraReady = true;
                         this.ensureSceneVisible();
                     }, 2000);
+                    
+                } catch (error) {
+                    console.error('❌ Camera delegation error:', error);
+                    this.updateCameraStatus('Delegation error');
+                    
+                    // Still hide loading and let user proceed
+                    setTimeout(() => {
+                        this.hideLoading();
+                        this.updateStatus('Camera error - proceeding anyway');
+                        this.cameraReady = true;
+                    }, 1000);
                 }
             }
             
@@ -1397,8 +1847,40 @@
             triggerVideo() {
                 if (this.videoPlaying) return;
                 
-                console.log('Triggering video playback');
+                console.log('🎯 Marker triggered! Starting 3-second countdown...');
                 this.videoPlaying = true;
+                
+                // Show triggered animation overlay
+                const triggeredOverlay = document.querySelector('#triggeredOverlay');
+                const countdownNumber = document.querySelector('#countdownNumber');
+                
+                triggeredOverlay.style.display = 'flex';
+                
+                // Countdown from 3 to 1
+                let countdown = 3;
+                countdownNumber.textContent = countdown;
+                
+                const countdownInterval = setInterval(() => {
+                    countdown--;
+                    if (countdown > 0) {
+                        countdownNumber.textContent = countdown;
+                        console.log(`⏰ Countdown: ${countdown}`);
+                    } else {
+                        countdownNumber.textContent = '🎬';
+                        console.log('🎬 Starting video!');
+                        
+                        // Clear interval and hide triggered overlay after a brief moment
+                        clearInterval(countdownInterval);
+                        setTimeout(() => {
+                            triggeredOverlay.style.display = 'none';
+                            this.showVideo();
+                        }, 500);
+                    }
+                }, 1000);
+            }
+            
+            showVideo() {
+                console.log('📹 Showing video overlay');
                 this.videoOverlay.style.display = 'flex';
                 
                 // Reset video to beginning
@@ -1408,9 +1890,9 @@
                 const playPromise = this.video.play();
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
-                        console.log('Video started playing');
+                        console.log('✅ Video started playing');
                     }).catch(error => {
-                        console.log('Auto-play prevented, user interaction required:', error);
+                        console.log('⚠️ Auto-play prevented, user interaction required:', error);
                         // On some mobile browsers, show play button
                         this.video.controls = true;
                     });
@@ -1420,22 +1902,31 @@
             closeVideo() {
                 this.video.pause();
                 this.videoOverlay.style.display = 'none';
+                
+                // Also hide triggered overlay in case it's still showing
+                const triggeredOverlay = document.querySelector('#triggeredOverlay');
+                const countdownNumber = document.querySelector('#countdownNumber');
+                triggeredOverlay.style.display = 'none';
+                countdownNumber.textContent = '3'; // Reset countdown
+                
                 this.videoPlaying = false;
-                console.log('Video closed');
+                console.log('📴 Video closed and reset');
             }
             
             detectMobile() {
                 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                 const isIPhone16Pro = this.detectiPhone16Pro();
+                const isGalaxyA52 = this.detectGalaxyA52();
                 
                 console.log('=== MOBILE DETECTION ===');
                 console.log('Is mobile device:', isMobile);
                 console.log('Is iPhone 16 Pro:', isIPhone16Pro);
+                console.log('Is Galaxy A52:', isGalaxyA52);
                 
                 // Update device info display
-                this.updateDeviceInfo(isIPhone16Pro);
+                this.updateDeviceInfo(isIPhone16Pro, isGalaxyA52);
                 
-                if (isMobile || isIPhone16Pro) {
+                if (isMobile || isIPhone16Pro || isGalaxyA52) {
                     document.body.classList.add('mobile');
                     console.log('✅ Mobile class added to body');
                     
@@ -1443,6 +1934,12 @@
                         document.body.classList.add('iphone-16-pro');
                         console.log('🎯 iPhone 16 Pro detected - applying specific fixes');
                         console.log('📱 iPhone 16 Pro class added to body');
+                    }
+                    
+                    if (isGalaxyA52) {
+                        document.body.classList.add('galaxy-a52');
+                        console.log('📱 Galaxy A52 detected - applying specific fixes');
+                        console.log('🎯 Galaxy A52 class added to body');
                     }
                     
                     // Enable debug info on mobile for testing
@@ -1455,10 +1952,10 @@
                 }
                 
                 console.log('=== END MOBILE DETECTION ===');
-                return isMobile || isIPhone16Pro;
+                return isMobile || isIPhone16Pro || isGalaxyA52;
             }
             
-            updateDeviceInfo(isIPhone16Pro) {
+            updateDeviceInfo(isIPhone16Pro, isGalaxyA52) {
                 const screenWidth = window.screen.width;
                 const screenHeight = window.screen.height;
                 const pixelRatio = window.devicePixelRatio;
@@ -1466,7 +1963,11 @@
                 const innerHeight = window.innerHeight;
                 
                 // Update device info display
-                document.querySelector('#deviceInfo').textContent = isIPhone16Pro ? 'iPhone 16 Pro ✅' : 'Other device';
+                let deviceName = 'Other device';
+                if (isIPhone16Pro) deviceName = 'iPhone 16 Pro ✅';
+                if (isGalaxyA52) deviceName = 'Galaxy A52 📱';
+                
+                document.querySelector('#deviceInfo').textContent = deviceName;
                 document.querySelector('#screenInfo').textContent = `${screenWidth}x${screenHeight}`;
                 document.querySelector('#ratioInfo').textContent = `${pixelRatio}x`;
                 document.querySelector('#innerInfo').textContent = `${innerWidth}x${innerHeight}`;
@@ -1490,7 +1991,7 @@
                 const innerHeight = window.innerHeight;
                 
                 // Log all device information for debugging
-                console.log('=== DEVICE DETECTION DEBUG ===');
+                console.log('=== iPHONE 16 PRO DETECTION DEBUG ===');
                 console.log('User Agent:', userAgent);
                 console.log('Is iOS:', isIOS);
                 console.log('Screen dimensions:', screenWidth, 'x', screenHeight);
@@ -1543,9 +2044,87 @@
                 if (matchedSpec) {
                     console.log('Matched spec:', matchedSpec);
                 }
-                console.log('=== END DEVICE DETECTION ===');
+                console.log('=== END iPHONE 16 PRO DETECTION ===');
                 
                 return isIPhone16Pro;
+            }
+            
+            detectGalaxyA52() {
+                // Enhanced Galaxy A52 detection with comprehensive logging
+                const userAgent = navigator.userAgent;
+                const isAndroid = /Android/i.test(userAgent);
+                const screenWidth = window.screen.width;
+                const screenHeight = window.screen.height;
+                const pixelRatio = window.devicePixelRatio;
+                const innerWidth = window.innerWidth;
+                const innerHeight = window.innerHeight;
+                
+                // Log device information for debugging
+                console.log('=== GALAXY A52 DETECTION DEBUG ===');
+                console.log('User Agent:', userAgent);
+                console.log('Is Android:', isAndroid);
+                console.log('Screen dimensions:', screenWidth, 'x', screenHeight);
+                console.log('Pixel ratio:', pixelRatio);
+                console.log('Inner dimensions:', innerWidth, 'x', innerHeight);
+                console.log('Available dimensions:', screen.availWidth, 'x', screen.availHeight);
+                
+                // Galaxy A52 specifications
+                const possibleGalaxyA52Specs = [
+                    // Galaxy A52 primary dimensions
+                    { width: 412, height: 915, ratio: 2.625 },
+                    { width: 915, height: 412, ratio: 2.625 },
+                    // Alternative Galaxy A52 dimensions (actual detected dimensions)
+                    { width: 384, height: 954, ratio: 2.8125 },
+                    { width: 954, height: 384, ratio: 2.8125 },
+                    { width: 384, height: 854, ratio: 2.625 },
+                    { width: 854, height: 384, ratio: 2.625 },
+                    // Similar Samsung Galaxy devices
+                    { width: 360, height: 640, ratio: 2 },
+                    { width: 640, height: 360, ratio: 2 },
+                    { width: 360, height: 780, ratio: 2.17 },
+                    { width: 780, height: 360, ratio: 2.17 }
+                ];
+                
+                let isGalaxyA52 = false;
+                let matchedSpec = null;
+                
+                if (isAndroid) {
+                    for (const spec of possibleGalaxyA52Specs) {
+                        if ((screenWidth === spec.width && screenHeight === spec.height) ||
+                            (innerWidth === spec.width && innerHeight === spec.height)) {
+                            isGalaxyA52 = true;
+                            matchedSpec = spec;
+                            if (spec.width === 384 && spec.height === 954) {
+                                console.log('🎯 Galaxy A52 detected with exact 384x954 dimensions!');
+                            }
+                            break;
+                        }
+                    }
+                }
+                
+                // Also check for Samsung Galaxy A series specifically in user agent
+                if (isAndroid && !isGalaxyA52) {
+                    const isSamsung = /Samsung|SM-A/i.test(userAgent);
+                    const isGalaxyA = /Galaxy.*A|SM-A/i.test(userAgent);
+                    
+                    if (isSamsung || isGalaxyA) {
+                        // Check if dimensions match Galaxy A52 range
+                        const aspectRatio = Math.max(screenWidth, screenHeight) / Math.min(screenWidth, screenHeight);
+                        if (aspectRatio > 2.0 && aspectRatio < 2.7 && pixelRatio >= 2.0) {
+                            isGalaxyA52 = true;
+                            matchedSpec = { width: screenWidth, height: screenHeight, ratio: pixelRatio };
+                            console.log('Detected as Galaxy A series device (likely A52) based on dimensions and user agent');
+                        }
+                    }
+                }
+                
+                console.log('Galaxy A52 detected:', isGalaxyA52);
+                if (matchedSpec) {
+                    console.log('Matched spec:', matchedSpec);
+                }
+                console.log('=== END GALAXY A52 DETECTION ===');
+                
+                return isGalaxyA52;
             }
             
             fixMobileViewport() {
@@ -1560,6 +2139,11 @@
                     this.applyiPhone16ProFixes();
                 }
                 
+                // Galaxy A52 specific fixes
+                if (this.detectGalaxyA52()) {
+                    this.applyGalaxyA52Fixes();
+                }
+                
                 // Prevent iOS Safari address bar issues
                 const fixViewportHeight = () => {
                     const vh = window.innerHeight * 0.01;
@@ -1572,6 +2156,9 @@
                     setTimeout(fixViewportHeight, 500);
                     if (this.detectiPhone16Pro()) {
                         setTimeout(() => this.applyiPhone16ProFixes(), 1000);
+                    }
+                    if (this.detectGalaxyA52()) {
+                        setTimeout(() => this.applyGalaxyA52Fixes(), 1000);
                     }
                 });
             }
@@ -1619,273 +2206,51 @@
                 }, 500);
             }
             
-            handleLoading() {
-                // Hide loading after scene is ready or timeout (increased to 20 seconds)
-                setTimeout(() => {
-                    if (!this.cameraReady) {
-                        this.hideLoading();
-                        console.log('Loading timeout - hiding loading screen anyway');
-                        this.updateStatus('Ready (timeout)');
-                    }
-                }, 20000);
-            }
-            
-            hideLoading() {
-                this.loading.classList.add('hidden');
-                setTimeout(() => {
-                    this.loading.style.display = 'none';
-                }, 500);
-            }
-            
-            handleResize() {
-                // Force scene resize on mobile orientation change
-                if (this.scene && this.scene.systems.renderer) {
-                    this.scene.systems.renderer.renderer.setSize(window.innerWidth, window.innerHeight);
-                }
+            applyGalaxyA52Fixes() {
+                console.log('Applying Galaxy A52 specific fixes');
                 
-                // Force full screen after resize
-                setTimeout(() => {
-                    this.ensureFullScreen();
-                }, 100);
-            }
-            
-            ensureFullScreen() {
-                const canvas = document.querySelector('a-scene canvas');
+                // Force full screen styles optimized for Galaxy A52
                 const scene = document.querySelector('a-scene');
-                
-                if (canvas) {
-                    canvas.style.width = '100vw';
-                    canvas.style.height = '100vh';
-                    canvas.style.position = 'fixed';
-                    canvas.style.top = '0';
-                    canvas.style.left = '0';
-                    canvas.style.zIndex = '1';
-                    console.log('Enforcing full screen canvas');
-                }
+                const canvas = document.querySelector('a-scene canvas');
                 
                 if (scene) {
-                    scene.style.width = '100vw';
-                    scene.style.height = '100vh';
-                    scene.style.position = 'fixed';
-                    scene.style.top = '0';
-                    scene.style.left = '0';
-                    console.log('Enforcing full screen scene');
+                    scene.style.setProperty('width', '100vw', 'important');
+                    scene.style.setProperty('height', '100vh', 'important');
+                    scene.style.setProperty('position', 'fixed', 'important');
+                    scene.style.setProperty('top', '0', 'important');
+                    scene.style.setProperty('left', '0', 'important');
+                    scene.style.setProperty('right', '0', 'important');
+                    scene.style.setProperty('bottom', '0', 'important');
+                    scene.style.setProperty('transform', 'translate3d(0, 0, 0)', 'important');
+                    scene.style.setProperty('z-index', '1', 'important');
                 }
                 
-                // iPhone 16 Pro gets extra aggressive treatment
-                if (this.detectiPhone16Pro()) {
-                    console.log('Applying iPhone 16 Pro ultra-aggressive full screen');
-                    this.applyiPhone16ProFixes();
-                    
-                    // Force a re-render
+                if (canvas) {
+                    canvas.style.setProperty('width', '100vw', 'important');
+                    canvas.style.setProperty('height', '100vh', 'important');
+                    canvas.style.setProperty('position', 'fixed', 'important');
+                    canvas.style.setProperty('top', '0', 'important');
+                    canvas.style.setProperty('left', '0', 'important');
+                    canvas.style.setProperty('right', '0', 'important');
+                    canvas.style.setProperty('bottom', '0', 'important');
+                    canvas.style.setProperty('transform', 'translate3d(0, 0, 0)', 'important');
+                    canvas.style.setProperty('object-fit', 'cover', 'important');
+                    canvas.style.setProperty('z-index', '1', 'important');
+                }
+                
+                // Force full screen on the renderer if available with Galaxy A52 optimizations
+                setTimeout(() => {
                     if (this.scene && this.scene.systems && this.scene.systems.renderer) {
                         const renderer = this.scene.systems.renderer.renderer;
                         renderer.setSize(window.innerWidth, window.innerHeight);
+                        renderer.domElement.style.setProperty('width', '100vw', 'important');
+                        renderer.domElement.style.setProperty('height', '100vh', 'important');
+                        
+                        // Apply Galaxy A52 specific renderer optimizations
+                        renderer.domElement.style.setProperty('object-fit', 'cover', 'important');
+                        renderer.domElement.style.setProperty('object-position', 'center', 'important');
                     }
-                }
-            }
-            
-            pauseExperience() {
-                if (this.videoPlaying) {
-                    this.video.pause();
-                }
-            }
-            
-            resumeExperience() {
-                if (this.videoPlaying && this.video.paused) {
-                    this.video.play();
-                }
-            }
-            
-            updateStatus(status) {
-                document.querySelector('#status').textContent = status;
-            }
-            
-            updateMarkerStatus(status) {
-                document.querySelector('#markerStatus').textContent = status;
-            }
-            
-            updateCameraStatus(status) {
-                document.querySelector('#cameraStatus').textContent = status;
-            }
-            
-            showError(message) {
-                alert(message);
-            }
-            
-            startAggressiveFullScreenEnforcement() {
-                console.log('🚀 Starting ULTRA-aggressive full-screen enforcement for iPhone 16 Pro');
-                
-                // Start continuous correction immediately
-                this.startContinuousCorrection();
-                
-                // Run immediately
-                this.forceUltraFullScreen();
-                
-                // Run every 100ms for the first 10 seconds
-                const aggressiveInterval = setInterval(() => {
-                    this.forceUltraFullScreen();
-                }, 100);
-                
-                // Stop aggressive enforcement after 10 seconds, continue with slower interval
-                setTimeout(() => {
-                    clearInterval(aggressiveInterval);
-                    
-                    // Continue with slower enforcement every 2 seconds
-                    setInterval(() => {
-                        this.forceUltraFullScreen();
-                    }, 2000);
-                }, 10000);
-            }
-            
-            startContinuousCorrection() {
-                // Ultra-aggressive continuous correction every 50ms
-                setInterval(() => {
-                    this.applyContinuousCorrection();
-                }, 50);
-                
-                console.log('🔥 Continuous viewport correction started (every 50ms)');
-            }
-            
-            applyContinuousCorrection() {
-                if (!this.detectiPhone16Pro()) return;
-                
-                const scene = document.querySelector('a-scene');
-                const canvas = document.querySelector('a-scene canvas');
-                const allCanvases = document.querySelectorAll('canvas');
-                const videoOverlay = document.querySelector('#videoOverlay');
-                const eventVideo = document.querySelector('#eventVideo');
-                const closeVideo = document.querySelector('#closeVideo');
-                
-                // Force exact iPhone 16 Pro dimensions
-                const exactWidth = '414px';
-                const exactHeight = '896px';
-                
-                // Apply to scene
-                if (scene) {
-                    scene.style.setProperty('width', exactWidth, 'important');
-                    scene.style.setProperty('height', exactHeight, 'important');
-                    scene.style.setProperty('position', 'fixed', 'important');
-                    scene.style.setProperty('top', '0px', 'important');
-                    scene.style.setProperty('left', '0px', 'important');
-                    scene.style.setProperty('right', 'auto', 'important');
-                    scene.style.setProperty('bottom', 'auto', 'important');
-                    scene.style.setProperty('transform', 'none', 'important');
-                    scene.style.setProperty('overflow', 'hidden', 'important');
-                    scene.style.setProperty('margin', '0px', 'important');
-                    scene.style.setProperty('padding', '0px', 'important');
-                }
-                
-                // Apply to all canvases
-                allCanvases.forEach(canvas => {
-                    canvas.style.setProperty('width', exactWidth, 'important');
-                    canvas.style.setProperty('height', exactHeight, 'important');
-                    canvas.style.setProperty('position', 'fixed', 'important');
-                    canvas.style.setProperty('top', '0px', 'important');
-                    canvas.style.setProperty('left', '0px', 'important');
-                    canvas.style.setProperty('right', 'auto', 'important');
-                    canvas.style.setProperty('bottom', 'auto', 'important');
-                    canvas.style.setProperty('transform', 'none', 'important');
-                    canvas.style.setProperty('object-fit', 'cover', 'important');
-                    canvas.style.setProperty('margin', '0px', 'important');
-                    canvas.style.setProperty('padding', '0px', 'important');
-                    canvas.style.setProperty('border', 'none', 'important');
-                    canvas.style.setProperty('outline', 'none', 'important');
-                    
-                    // Set canvas attributes to exact pixels
-                    canvas.setAttribute('width', '414');
-                    canvas.setAttribute('height', '896');
-                });
-                
-                // Force video overlay to exact dimensions (when visible)
-                if (videoOverlay && videoOverlay.style.display === 'flex') {
-                    videoOverlay.style.setProperty('width', exactWidth, 'important');
-                    videoOverlay.style.setProperty('height', exactHeight, 'important');
-                    videoOverlay.style.setProperty('min-width', exactWidth, 'important');
-                    videoOverlay.style.setProperty('min-height', exactHeight, 'important');
-                    videoOverlay.style.setProperty('max-width', exactWidth, 'important');
-                    videoOverlay.style.setProperty('max-height', exactHeight, 'important');
-                    videoOverlay.style.setProperty('position', 'fixed', 'important');
-                    videoOverlay.style.setProperty('top', '0px', 'important');
-                    videoOverlay.style.setProperty('left', '0px', 'important');
-                    videoOverlay.style.setProperty('right', 'auto', 'important');
-                    videoOverlay.style.setProperty('bottom', 'auto', 'important');
-                    videoOverlay.style.setProperty('transform', 'none', 'important');
-                    videoOverlay.style.setProperty('margin', '0px', 'important');
-                    videoOverlay.style.setProperty('padding', '20px 0px', 'important');
-                    videoOverlay.style.setProperty('border', 'none', 'important');
-                    videoOverlay.style.setProperty('outline', 'none', 'important');
-                    videoOverlay.style.setProperty('box-sizing', 'border-box', 'important');
-                    videoOverlay.style.setProperty('overflow-y', 'auto', 'important');
-                    videoOverlay.style.setProperty('overflow-x', 'hidden', 'important');
-                    videoOverlay.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');
-                    videoOverlay.style.setProperty('touch-action', 'pan-y', 'important');
-                    videoOverlay.style.setProperty('display', 'flex', 'important');
-                    videoOverlay.style.setProperty('flex-direction', 'column', 'important');
-                    videoOverlay.style.setProperty('justify-content', 'flex-start', 'important');
-                    videoOverlay.style.setProperty('align-items', 'center', 'important');
-                }
-                
-                // Force event video to optimized dimensions (when visible)
-                if (eventVideo && videoOverlay && videoOverlay.style.display === 'flex') {
-                    eventVideo.style.setProperty('width', '370px', 'important');
-                    eventVideo.style.setProperty('height', '620px', 'important');
-                    eventVideo.style.setProperty('min-width', '370px', 'important');
-                    eventVideo.style.setProperty('min-height', '620px', 'important');
-                    eventVideo.style.setProperty('max-width', '370px', 'important');
-                    eventVideo.style.setProperty('max-height', 'none', 'important');
-                    eventVideo.style.setProperty('position', 'relative', 'important');
-                    eventVideo.style.setProperty('object-fit', 'contain', 'important');
-                    eventVideo.style.setProperty('object-position', 'center', 'important');
-                    eventVideo.style.setProperty('transform', 'none', 'important');
-                    eventVideo.style.setProperty('margin', '20px 0px', 'important');
-                    eventVideo.style.setProperty('padding', '0px', 'important');
-                    eventVideo.style.setProperty('border', 'none', 'important');
-                    eventVideo.style.setProperty('outline', 'none', 'important');
-                    eventVideo.style.setProperty('border-radius', '10px', 'important');
-                    eventVideo.style.setProperty('box-sizing', 'border-box', 'important');
-                    eventVideo.style.setProperty('flex-shrink', '0', 'important');
-                }
-                
-                // Force close button positioning (when visible)
-                if (closeVideo && videoOverlay && videoOverlay.style.display === 'flex') {
-                    closeVideo.style.setProperty('position', 'absolute', 'important');
-                    closeVideo.style.setProperty('top', '20px', 'important');
-                    closeVideo.style.setProperty('right', '20px', 'important');
-                    closeVideo.style.setProperty('width', '40px', 'important');
-                    closeVideo.style.setProperty('height', '40px', 'important');
-                    closeVideo.style.setProperty('transform', 'none', 'important');
-                    closeVideo.style.setProperty('margin', '0px', 'important');
-                    closeVideo.style.setProperty('padding', '0px', 'important');
-                    closeVideo.style.setProperty('z-index', '501', 'important');
-                }
-                
-                // Force body and html to exact dimensions
-                document.body.style.setProperty('width', exactWidth, 'important');
-                document.body.style.setProperty('height', exactHeight, 'important');
-                document.body.style.setProperty('max-width', exactWidth, 'important');
-                document.body.style.setProperty('max-height', exactHeight, 'important');
-                document.body.style.setProperty('overflow', 'hidden', 'important');
-                
-                document.documentElement.style.setProperty('width', exactWidth, 'important');
-                document.documentElement.style.setProperty('height', exactHeight, 'important');
-                document.documentElement.style.setProperty('max-width', exactWidth, 'important');
-                document.documentElement.style.setProperty('max-height', exactHeight, 'important');
-                document.documentElement.style.setProperty('overflow', 'hidden', 'important');
-                
-                // Force renderer to exact dimensions if available
-                if (this.scene && this.scene.systems && this.scene.systems.renderer) {
-                    const renderer = this.scene.systems.renderer.renderer;
-                    renderer.setSize(414, 896, false);
-                    const rendererElement = renderer.domElement;
-                    if (rendererElement) {
-                        rendererElement.style.setProperty('width', exactWidth, 'important');
-                        rendererElement.style.setProperty('height', exactHeight, 'important');
-                        rendererElement.style.setProperty('position', 'fixed', 'important');
-                        rendererElement.style.setProperty('top', '0px', 'important');
-                        rendererElement.style.setProperty('left', '0px', 'important');
-                    }
-                }
+                }, 500);
             }
             
             forceUltraFullScreen() {
@@ -1967,6 +2332,13 @@
                         canvas.setAttribute('height', vh + 2);
                         console.log(`📱 iPhone 16 Pro canvas sized to: ${vw + 2}x${vh + 2}`);
                     }
+                    
+                    // Also set canvas attributes directly for Galaxy A52
+                    if (this.detectGalaxyA52()) {
+                        canvas.setAttribute('width', vw + 2);
+                        canvas.setAttribute('height', vh + 2);
+                        console.log(`📱 Galaxy A52 canvas sized to: ${vw + 2}x${vh + 2}`);
+                    }
                 }
                 
                 // Force any video elements to full screen
@@ -1992,31 +2364,291 @@
             
             async requestPermissionsAutomatically() {
                 try {
-                    console.log('🚀 Starting automatic permission requests...');
+                    console.log('🚀 Starting simplified permission flow...');
                     
-                    // Request camera permission first
-                    await this.requestCameraPermission();
+                    // Don't request camera permission manually - let AR.js handle it
+                    console.log('📷 Skipping manual camera request - AR.js will handle camera');
                     
-                    // Small delay between requests
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                    
-                    // Request motion permission for iOS devices
+                    // Only request motion permission for iOS devices
                     if (this.detectiOS()) {
                         console.log('📱 iOS detected - requesting motion permissions...');
-                        await this.requestDeviceMotionPermission();
+                        setTimeout(async () => {
+                            try {
+                                await this.requestDeviceMotionPermission();
+                            } catch (error) {
+                                console.log('⚠️ Motion permission failed, continuing anyway:', error.message);
+                            }
+                        }, 1000);
                     }
                     
-                    // Hide instructions after permissions are handled
+                    // Hide instructions after a delay to let AR.js start
                     setTimeout(() => {
-                        this.instructions.style.display = 'none';
-                    }, 3000);
+                        const instructions = document.querySelector('#instructions');
+                        if (instructions && this.cameraReady) {
+                            instructions.style.display = 'none';
+                        }
+                    }, 8000);
                     
-                    console.log('✅ Automatic permission requests completed');
+                    console.log('✅ Simplified permission flow completed');
                     
                 } catch (error) {
-                    console.log('⚠️ Automatic permission request error:', error.message);
+                    console.log('⚠️ Permission flow error:', error.message);
                     // Don't block the experience if permissions fail
                 }
+            }
+            
+            handleLoading() {
+                // Show manual start button after 5 seconds as fallback
+                setTimeout(() => {
+                    const manualStartButton = document.querySelector('#manualStart');
+                    const loadingElement = document.querySelector('#loading');
+                    if (manualStartButton && loadingElement && !loadingElement.classList.contains('hidden')) {
+                        console.log('⏰ Showing manual start button as fallback');
+                        manualStartButton.style.display = 'block';
+                        
+                        // Update loading text to be more helpful
+                        const loadingText = document.querySelector('.loading-text');
+                        if (loadingText) {
+                            loadingText.textContent = 'Having trouble? Use the button below!';
+                        }
+                    }
+                }, 5000);
+                
+                // Hide loading after scene is ready or timeout (reduced to 8 seconds for better UX)
+                setTimeout(() => {
+                    if (!this.cameraReady) {
+                        this.hideLoading();
+                        console.log('⏰ Loading timeout - hiding loading screen anyway');
+                        this.updateStatus('Ready (timeout)');
+                        this.cameraReady = true;
+                    }
+                }, 8000);
+                
+                // Additional fallback - force hide after camera permission flow
+                setTimeout(() => {
+                    const loadingElement = document.querySelector('#loading');
+                    if (loadingElement && !loadingElement.classList.contains('hidden')) {
+                        console.log('🔄 Emergency loading screen hide - ensuring user can proceed');
+                        this.hideLoading();
+                        this.updateStatus('Force ready');
+                    }
+                }, 12000);
+                
+                // Ultra-aggressive final fallback
+                setTimeout(() => {
+                    const loadingElement = document.querySelector('#loading');
+                    if (loadingElement && !loadingElement.classList.contains('hidden')) {
+                        console.log('💥 ULTRA-AGGRESSIVE loading screen removal');
+                        loadingElement.style.display = 'none';
+                        this.updateStatus('Force hidden');
+                        this.cameraReady = true;
+                    }
+                }, 15000);
+            }
+            
+            showCameraError() {
+                const loadingText = document.querySelector('.loading-text');
+                const loadingSubtext = document.querySelector('.loading-subtext');
+                const manualStart = document.querySelector('#manualStart');
+                
+                if (loadingText) {
+                    loadingText.textContent = 'Camera Access Issue';
+                }
+                if (loadingSubtext) {
+                    loadingSubtext.textContent = 'Please allow camera access and click the button below to start';
+                }
+                if (manualStart) {
+                    manualStart.style.display = 'block';
+                    manualStart.textContent = '📷 Try Camera Access';
+                }
+            }
+            
+            startCameraStatusCheck() {
+                console.log('🔍 Starting periodic camera status check...');
+                
+                // Check every 3 seconds for camera activity
+                this.cameraCheckInterval = setInterval(() => {
+                    this.checkCameraStatus();
+                }, 3000);
+                
+                // Stop checking after 30 seconds
+                setTimeout(() => {
+                    if (this.cameraCheckInterval) {
+                        clearInterval(this.cameraCheckInterval);
+                        console.log('⏰ Camera status check stopped');
+                    }
+                }, 30000);
+            }
+            
+            checkCameraStatus() {
+                const video = document.querySelector('video');
+                const canvas = document.querySelector('a-scene canvas');
+                
+                if (video && video.videoWidth > 0 && video.videoHeight > 0) {
+                    console.log('✅ Camera video is active:', video.videoWidth + 'x' + video.videoHeight);
+                    this.updateCameraStatus('Video active');
+                    this.cameraReady = true;
+                    this.hideLoading();
+                    
+                    if (this.cameraCheckInterval) {
+                        clearInterval(this.cameraCheckInterval);
+                    }
+                } else if (canvas && canvas.width > 0 && canvas.height > 0) {
+                    console.log('✅ Canvas is rendering:', canvas.width + 'x' + canvas.height);
+                    this.updateCameraStatus('Canvas active');
+                    this.cameraReady = true;
+                    this.hideLoading();
+                } else {
+                    console.log('⏳ Still waiting for camera/video...');
+                    this.updateCameraStatus('Waiting...');
+                }
+            }
+            
+            checkARjsStatus() {
+                console.log('🔍 Checking AR.js status...');
+                
+                // Check if AR.js system is loaded
+                if (this.scene && this.scene.systems && this.scene.systems['arjs']) {
+                    console.log('✅ AR.js system is loaded');
+                    const arjsSystem = this.scene.systems['arjs'];
+                    
+                    if (arjsSystem.arSource) {
+                        console.log('✅ AR.js source is available');
+                        this.updateCameraStatus('AR.js source ready');
+                    }
+                    
+                    if (arjsSystem.arContext) {
+                        console.log('✅ AR.js context is available');
+                        this.updateCameraStatus('AR.js context ready');
+                    }
+                } else {
+                    console.log('⏳ AR.js system not yet loaded');
+                    this.updateStatus('Loading AR.js...');
+                }
+                
+                // Check for video element
+                const video = document.querySelector('video');
+                if (video) {
+                    console.log('📹 Video element found');
+                    console.log('📹 Video ready state:', video.readyState);
+                    console.log('📹 Video dimensions:', video.videoWidth + 'x' + video.videoHeight);
+                    
+                    if (video.readyState >= 2) { // HAVE_CURRENT_DATA
+                        console.log('✅ Video has data and is ready');
+                        this.updateCameraStatus('Video ready');
+                        this.cameraReady = true;
+                        this.hideLoading();
+                    }
+                } else {
+                    console.log('⏳ No video element found yet');
+                }
+            }
+            
+            forceARjsCamera() {
+                console.log('🔧 Attempting to force AR.js camera initialization...');
+                
+                try {
+                    // Try to access AR.js internals to force camera start
+                    if (this.scene && this.scene.systems && this.scene.systems['arjs']) {
+                        const arjsSystem = this.scene.systems['arjs'];
+                        console.log('🎯 Found AR.js system, attempting to initialize...');
+                        
+                        // Check if we can trigger AR.js initialization
+                        if (arjsSystem.tick) {
+                            console.log('🔄 Triggering AR.js tick...');
+                            arjsSystem.tick();
+                        }
+                    }
+                    
+                    // Also try to get video permissions directly for AR.js
+                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                        console.log('🎥 Checking if camera permission is available...');
+                        navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+                            .then(stream => {
+                                console.log('✅ Camera permission confirmed - stopping test stream');
+                                stream.getTracks().forEach(track => track.stop());
+                                this.updateCameraStatus('Permission confirmed');
+                            })
+                            .catch(error => {
+                                console.log('❌ Camera permission denied:', error.message);
+                                this.updateCameraStatus('Permission denied');
+                                this.showCameraError();
+                            });
+                    }
+                    
+                } catch (error) {
+                    console.log('⚠️ Force camera error:', error.message);
+                    this.updateCameraStatus('Force attempt failed');
+                }
+            }
+            
+            updateStatus(status) {
+                const statusElement = document.querySelector('#status');
+                if (statusElement) {
+                    statusElement.textContent = status;
+                }
+                console.log('📊 Status:', status);
+            }
+            
+            updateMarkerStatus(status) {
+                const markerStatusElement = document.querySelector('#markerStatus');
+                if (markerStatusElement) {
+                    markerStatusElement.textContent = status;
+                }
+            }
+            
+            updateCameraStatus(status) {
+                const cameraStatusElement = document.querySelector('#cameraStatus');
+                if (cameraStatusElement) {
+                    cameraStatusElement.textContent = status;
+                }
+                console.log('📷 Camera Status:', status);
+            }
+            
+            hideLoading() {
+                const loadingElement = document.querySelector('#loading');
+                if (loadingElement && !loadingElement.classList.contains('hidden')) {
+                    loadingElement.classList.add('hidden');
+                    console.log('🎭 Loading screen hidden');
+                    
+                    // Remove from DOM after transition
+                    setTimeout(() => {
+                        if (loadingElement.classList.contains('hidden')) {
+                            loadingElement.style.display = 'none';
+                        }
+                    }, 500);
+                }
+            }
+            
+            handleResize() {
+                console.log('📱 Handling resize/orientation change');
+                
+                // Force full screen again after orientation change
+                this.ensureSceneVisible();
+                
+                if (this.detectiPhone16Pro()) {
+                    setTimeout(() => this.applyiPhone16ProFixes(), 500);
+                }
+                
+                if (this.detectGalaxyA52()) {
+                    setTimeout(() => this.applyGalaxyA52Fixes(), 500);
+                }
+                
+                // Update device info
+                this.updateDeviceInfo(this.detectiPhone16Pro(), this.detectGalaxyA52());
+            }
+            
+            pauseExperience() {
+                console.log('⏸️ Experience paused (page hidden)');
+                if (this.video && !this.video.paused) {
+                    this.video.pause();
+                }
+            }
+            
+            resumeExperience() {
+                console.log('▶️ Experience resumed (page visible)');
+                // Don't auto-resume video - let user control it
+                this.ensureSceneVisible();
             }
         }
         
